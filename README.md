@@ -1,51 +1,100 @@
-# ♟️ Arduino Chess Timer + Custom Board + 3D-Printed Pieces
-
-This project combines electronics, CAD, and digital fabrication to create a fully custom **chess set with a built-in timer**! It includes a **3D-printed case for an Arduino-powered timer**, **laser-cut chessboard**, and a complete set of **3D-printed chess pieces**.
+# ♟️ Arduino Chess/Checkers Timer + Custom Board + 3D-Printed Pieces
 
 ---
 
-## 🧠 Features
+## 📌 Overview
+This project combines CAD design, 3D printing, and Arduino programming to create a **custom chess set with an integrated timer**.  
+The goal is to design and manufacture a **playable chessboard** with fully 3D-printed pieces and a **self-built chess timer**, housed in a custom case, powered by an Arduino and OLED display.
 
-- ✅ Arduino Uno-based **digital chess timer**
-- ✅ Custom-designed and **3D-printed enclosure**
-- ✅ Full set of **chess pieces**, designed and printed in PLA
-- ✅ **Laser-cut chessboard** made from wood or acrylic
-- ✅ Diagonal vent slits for cooling
-- ✅ Minimalist, clean internal layout
-
----
-
-## 🛠️ Project Components
-
-### Electronics
-
-- Arduino Uno (or Nano)
-- 0.96" OLED Display (SSD1306 I2C)
-- 2x Momentary Push Buttons
-- Jumper Wires (M–F)
-- Power via USB or battery
-
-### Mechanical
-
-- `case.STL` — Timer enclosure
-- `chess_pieces/` — Full STL set: pawn, rook, bishop, knight, queen, king
-- `chessboard.dxf` — Laser-cuttable board layout (standard 8×8 grid)
-- Optional: Screws or adhesive for Arduino mounting
+This project showcases:
+- 🧩 CAD modeling (board, pieces, timer case)
+- 🖨️ 3D printing and manufacturing
+- ⚡ Arduino hardware integration (OLED, buttons, LEDs)
+- 💻 Embedded programming for timing logic
+- 🎮 A polished, playable final product
 
 ---
 
-## 🖨️ 3D Print Settings
+## 🏗️ Components
 
-| Component     | Material | Infill  | Layer Height | Supports |
-|---------------|----------|---------|--------------|----------|
-| Case & Lid     | PLA      | 20–30%  | 0.2 mm       | No       |
-| Chess Pieces   | PLA      | 10–15%  | 0.1–0.2 mm   | Yes (for overhangs) |
+### 1. **3D-Printed Chessboard**
+- Designed in CAD with integrated slots for electronics
+- Board manufactured with a balance of durability and aesthetics
+- Smooth finish for consistent gameplay
+
+### 2. **3D-Printed Chess Pieces**
+- Custom CAD designs for all 32 chess pieces and all 24 checkers pieces
+- Printed for consistency in weight and balance
+- Optional: weighted bases for stability
+
+### 3. **Custom Chess Timer**
+- CAD-designed enclosure with clean cutouts for OLED screen and buttons
+- Two tactile push buttons (Start / Pause & Reset)
+- Integrated Arduino logic for countdown tracking
+
+### 4. **Electronics**
+- **Arduino Uno/Nano** as controller  
+- **0.96" OLED display** for timer output  
+- **Tactile push buttons** for player inputs  
+- **LED indicators** (optional, for visual cues)  
+- Powered via USB or battery pack  
 
 ---
 
-## 🔪 Laser Cut Settings
+## ⚙️ Features
+- Dual timer functionality (one per player)  
+- Start/stop per button press  
+- Adjustable initial time (configurable in code)  
+- Visual feedback via OLED + LEDs  
+- Portable and lightweight design  
 
-- Material: 1/8" or 1/4" wood / acrylic
-- File: `chessboard.dxf`
-- Suggested Layer: Vector Cut for squares and border
-- Optional: Etch grid labels (A–H, 1–8)
+---
+
+## 🖼️ CAD & Manufacturing
+- CAD files for:
+  - Chessboard  
+  - Chess pieces  
+  - Timer enclosure (with embossed top)  
+- Designed with print tolerances in mind (0.2–0.3 mm clearance for OLED & button fit)  
+- Printed with PLA (can be adapted to other materials)  
+
+---
+
+## 🧑‍💻 Code
+Arduino code handles:
+- Button inputs (debounced)  
+- Countdown timer logic  
+- Pause/resume functions  
+- OLED rendering of both player clocks  
+
+All code lives in the [`/arduino`](./arduino) folder.  
+
+---
+
+## 🚀 Future Improvements
+- Add buzzer for time warnings  
+- Magnetic base or weighted pieces  
+- Backlit board squares for modern look  
+- Bluetooth/USB logging of moves & time  
+
+---
+
+## 📷 Gallery
+(*Add photos of board, pieces, timer once printed and assembled*)  
+
+---
+
+## 🔧 How to Build
+1. Print the provided CAD files  
+2. Assemble chessboard & pieces  
+3. Print timer enclosure  
+4. Wire Arduino with OLED + buttons (see wiring diagram in `/docs`)  
+5. Upload Arduino code  
+6. Play chess with your custom set 🎉  
+
+---
+
+## 📜 License
+MIT License – free to use, modify, and share.  
+
+---
